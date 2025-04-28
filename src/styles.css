@@ -72,6 +72,38 @@ body{
 
 }
 
+.instagram-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre posts */
+  padding: 10px;
+}
+
+.instagram-wrapper .instagram-media {
+  flex: 1 1 calc(33.333% - 20px); /* 3 columnas menos el espacio */
+  max-width: calc(33.333% - 20px);
+  min-width: 250px; /* Que no se achiquen demasiado */
+  box-sizing: border-box;
+}
+
+/* Responsive para tabletas y móviles */
+@media (max-width: 768px) {
+  .instagram-wrapper .instagram-media {
+    flex: 1 1 calc(50% - 20px); /* 2 columnas en tabletas */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram-wrapper .instagram-media {
+    flex: 1 1 100%; /* 1 columna en celulares pequeños */
+    max-width: 100%;
+  }
+}
+
+
+
 section{
     max-width: 100%;
     margin: 0 auto;
